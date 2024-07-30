@@ -59,7 +59,10 @@ The structure is as follows,
             └── yabairc
 ```
 
-You can run `stow` on a top level folder withnin the dotfiles repository e.g `stow nvim`. This will create a link to `~/.config/nvim` for us. 
+First clone the dotfiles repo into your `~/` directory and `cd` into the new direcotry.
+
+
+You can then run `stow` on a top level folder within the dotfiles repository e.g `stow nvim`. This will create a link to `~/.config/nvim` for us. 
 You may repeat this step on other folders that you wish to include in your local configuration.
 
 
