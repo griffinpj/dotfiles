@@ -3,8 +3,8 @@ local ufo = require('ufo')
 
 ufo.setup({})
 
-vim.keymap.set('n', '<leader>zo', ufo.openAllFolds, { desc = 'Open all folds' })
-vim.keymap.set('n', '<leader>zc', ufo.closeAllFolds, { desc = 'Close all folds' })
+vim.keymap.set('n', '<leader>zO', ufo.openAllFolds, { desc = 'Open all folds' })
+vim.keymap.set('n', '<leader>zC', ufo.closeAllFolds, { desc = 'Close all folds' })
 
 local lsp_zero = require('lsp-zero')
 
