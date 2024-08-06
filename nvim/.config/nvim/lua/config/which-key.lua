@@ -16,11 +16,6 @@ wk.add({
     -- { "<leader>w", proxy = "<c-w>", group = "windows" }, -- proxy to window mappings
 
     -- Leader mappings
-    { "<leader>k", "<cmd>lnext<CR>zz", desc = "Next quickfix line" },
-    { "<leader>j", "<cmd>lprev<CR>zz", desc = "Previous quickfix line" },
-    { "<leader>y", [["+y]], desc = "Copy selected text into system clipboard" },
-    { "<leader>Y", [["+Y]], desc = "Copy selected lines into system clipboard" },
-    { "<leader>P", [["_dP]], desc = "Paste over selection and keep clipboard" },
     { "<leader>ff", vim.lsp.buf.format, desc = 'Format file' },
     { "<leader>fx", "<cmd>!chmod +x %<CR>", desc = "Set file as executable" },
     { "<leader>q", "<cmd>q<cr>", desc = "Quit" }, -- no need to specify mode since it's inherited
@@ -33,5 +28,14 @@ wk.add({
             return require("which-key.extras").expand.buf()
         end
     },
+    {
+        mode = { 'n', 'v' },
+        { "<leader>k", "<cmd>lnext<CR>zz", desc = "Next quickfix line" },
+        { "<leader>j", "<cmd>lprev<CR>zz", desc = "Previous quickfix line" },
+        { "<leader>y", [["+y]], desc = "Copy selected text into system clipboard" },
+        { "<leader>Y", [["+Y]], desc = "Copy selected lines into system clipboard" },
+        { "<leader>P", [["_dP]], desc = "Paste over selection and keep clipboard" },
+
+    }
 })
 

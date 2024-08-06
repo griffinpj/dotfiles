@@ -1343,6 +1343,6 @@ dynamic_background_opacity yes
 
 
 # BEGIN_KITTY_THEME
-# Cyberdream
+# Brogrammer
 include current-theme.conf
 # END_KITTY_THEME

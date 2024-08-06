@@ -26,5 +26,5 @@ require("helpers.keys").set_leader(" ")
 lazy.setup("plugins")
 
 -- Might as well set up an easy-access keybinding
-
 require("helpers.keys").map("n", "<leader>ls", lazy.show, "Show Manager")
+require('helpers.auto')

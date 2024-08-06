@@ -1,7 +1,9 @@
 require('telescope').setup({
     pickers = {
         live_grep = {
-            vimgrep_args = { "--fixed-strings", },
+            additional_args = function()
+                return { '--fixed-strings' }
+            end,
             layout_config = {
                 horizontal = {
                     width = 0.95,
@@ -10,6 +12,9 @@ require('telescope').setup({
             }
         },
         find_files = {
+            additional_args = function()
+                return { '--fixed-strings' }
+            end,
             layout_config = {
                 horizontal = {
                     width = 0.95,
@@ -18,6 +23,9 @@ require('telescope').setup({
             }
         },
         git_files = {
+            additional_args = function()
+                return { '--fixed-strings' }
+            end,
             layout_config = {
                 horizontal = {
                     width = 0.95,
