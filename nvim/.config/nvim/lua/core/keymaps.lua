@@ -13,6 +13,9 @@ vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+-- remap window swap command
+-- vim.keymap.set('n', '<C-w>', '<C-b>')
+
 -- search terms stay in middle
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
