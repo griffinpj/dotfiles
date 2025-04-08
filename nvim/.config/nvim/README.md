@@ -14,7 +14,7 @@ Now let's start at,
 
 ### The Basics
 
-Many key combos use the `<leader>` key. For our config, the `<leader>` key is defined
+Many key combos use the `<the_leader>` key. For our config, the `<the_leader>` key is defined
 as the `<space>` key.
 
 The clipboard within each instance of vim is contained. Meaning if you yank `y`

@@ -5,5 +5,6 @@ return {
     {'nvim-treesitter/playground'},
     config = function ()
         vim.cmd("TSUpdate")
+        require('config.treesitter-context')
     end
 }
