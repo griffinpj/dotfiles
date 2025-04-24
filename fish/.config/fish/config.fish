@@ -17,6 +17,7 @@ set -gx PNPM_HOME "/Users/griffinjohnson/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 
 
+
 # Get gpg to work ...
 export GPG_TTY=$(tty)
 set -x GPG_TTY (tty)
@@ -32,6 +33,9 @@ source /Users/gjohnson/.docker/init-fish.sh || true # Added by Docker Desktop
 set -gx PNPM_HOME "/Users/gjohnson/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
+
+#zk setup
+export ZK_NOTEBOOK_DIR="$HOME/vaults/Palace"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 zoxide init fish | source
