@@ -1,8 +1,4 @@
-# NOTEBOOK SETTINGS
-[notebook]
-dir = "~/vaults/Palace"
-
-# NOTE SETTINGS
+# SETTINGS
 [note]
 
 # Language used when writing notes.
@@ -13,7 +9,7 @@ language = "en"
 default-title = "Untitled"
 
 # Template used to generate a note's filename, without extension.
-filename = "{{id}}-{{slug title}}"
+filename = "{{id}}"
 
 # The file extension used for the notes.
 extension = "md"
@@ -28,7 +24,7 @@ template = "default.md"
 id-charset = "alphanum"
 
 # Length of the generated IDs.
-id-length = 4
+id-length = 8
 
 # Letter case for the random IDs.
 id-case = "lower"
@@ -40,12 +36,14 @@ author = "Griffin"
 
 
 # GROUP OVERRIDES
-# [group.journal]
-# paths = ["journal/weekly", "journal/daily"]
 
-# [group.journal.note]
-# filename = "{{format-date now}}"
+[group.daily]
+paths = ["daily"]
 
+[group.daily.note]
+filename = "{{format-date now '%Y-%m-%d'}}"
+extension = "md"
+template = "daily.md"
 
 # MARKDOWN SETTINGS
 [format.markdown]
@@ -54,15 +52,13 @@ hashtags = true
 # Enable support for :colon:separated:tags:
 colon-tags = true
 
+link-format = "[[{{filename}}|{{title}}]]"
 
 # EXTERNAL TOOLS
 [tool]
 
 # Default editor used to open notes.
 editor = "nvim"
-
-# Default shell used by aliases and commands.
-shell = "/bin/bash"
 
 # Pager used to scroll through long output.
 pager = "less -FIRX"
@@ -78,13 +74,41 @@ recents = "--sort created- --created-after 'last two weeks'"
 [alias]
 
 # Edit the last modified note.
-edlast = "zk edit --limit 1 --sort modified- $@"
+edlast = "zk edit --limit 1 --sort modified- $argv"
 
 # Edit the notes selected interactively among the notes created the last two weeks.
 recent = "zk edit --sort created- --created-after 'last two weeks' --interactive"
 
 # Show a random note.
 lucky = "zk list --quiet --format full --sort random --limit 1"
+
+# list notes for editing
+ls = "zk edit --interactive"
+
+# sear notes by tags
+t = "zk edit --interactive --tag $argv"
+
+config = 'nvim "$HOME/.config/zk/config.toml"'
+
+# new journal entry
+daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/daily"'
+
+# new note
+ne = 'zk new --no-input "$ZK_NOTEBOOK_DIR" --title $argv'
+
+
+journal = "zk edit --sort created- $ZK_NOTEBOOK_DIR/daily --interactive"
+
+all = "zk edit --sort created- $ZK_NOTEBOOK_DIR --interactive"
+
+# update zk notes
+# update = "cd $ZK_NOTEBOOK_DIR; git add -A; git commit -am 'updating'; git push; cd -"
+
+# remove a files
+rm = "zk list --interactive --quiet --format path --delimiter0 $argv | xargs -0 rm -vf --"
+
+# open last zk in slides
+slides = "zk list --interactive --quiet --format path --delimiter0 $argv | xargs -0 slides"
 
 # LSP (EDITOR INTEGRATION)
 [lsp]
