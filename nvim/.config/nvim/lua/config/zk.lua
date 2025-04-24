@@ -11,11 +11,14 @@ local opts = { noremap = true, silent = false }
 vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>",
     { noremap = true, silent = false, desc = 'Create new note w/ title', })
 
+vim.api.nvim_set_keymap("n", "<leader>zd", "<Cmd>ZkNew { date = 'today', dir = 'daily' }<CR>",
+    { noremap = true, silent = false, desc = 'Open daily note', })
+
 -- Open notes.
 vim.api.nvim_set_keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>",
     { noremap = true, silent = false, desc = 'Open notes', })
 -- Open notes associated with the selected tags.
-vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>",
+vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags { sort = { 'name-' } }<CR>",
     { noremap = true, silent = false, desc = 'Open notes for tag', })
 
 -- Search for the notes matching a given query.
