@@ -53,6 +53,10 @@ The structure is as follows,
 │   └── .config
 │       └── tmux
 │           └── tmux.conf
+├── zk
+│   └── .config
+│       └── zk
+│           └── config.toml
 └── yabai
     └── .config
         └── yabai
