@@ -56,7 +56,9 @@ The structure is as follows,
 ├── zk
 │   └── .config
 │       └── zk
-│           └── config.toml
+│           ├── config.toml
+│           └── templates
+│               └── ...
 └── yabai
     └── .config
         └── yabai
