@@ -6,6 +6,6 @@ return {
     lazy = false,
     config = function ()
         vim.cmd("TSUpdate")
-        require('config.treesitter-context')
+        require('config.treesitter')
     end
 }

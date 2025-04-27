@@ -3,6 +3,6 @@ require("kanagawa").setup({
     borderless_telescope = false,
     italic_comments = true,
     hide_fillchars = true,
+    undercurl = false
 })
-vim.cmd("colorscheme kanagawa")
 

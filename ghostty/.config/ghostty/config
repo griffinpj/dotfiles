@@ -1,0 +1,12 @@
+
+# No window close buttons for arch
+window-decoration = none
+
+# matches nvim theme
+theme = kanagawabones
+
+# transparent background
+background-opacity = 0.75
+
+# the best font out there. you knowwww
+font-family = Comic Code Ligatures

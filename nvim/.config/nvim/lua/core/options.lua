@@ -31,8 +31,6 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
-vim.opt.termguicolors = true
-
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
@@ -46,3 +44,9 @@ vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+
+-- set colorscheme
+vim.cmd.colorscheme('kanagawa')
+
+vim.cmd('TSEnable highlight')
+

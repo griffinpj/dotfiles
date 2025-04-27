@@ -14,7 +14,8 @@ require('nvim-treesitter.configs').setup({
         "rust",
         "go",
         "typescript",
-        "regex"
+        "regex",
+        "markdown"
     },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
