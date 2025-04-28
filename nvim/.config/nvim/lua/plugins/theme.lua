@@ -1,6 +1,7 @@
-return {
-    "rebelot/kanagawa.nvim",
-    config = function ()
-        require("config.theme")
-    end
-}
+    return {
+        "rebelot/kanagawa.nvim",
+        lazy = false,
+        config = function ()
+            require("config.theme")
+        end
+    }

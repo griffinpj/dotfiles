@@ -3,13 +3,13 @@ local preCog = require("precognition")
 local timer = vim.loop.new_timer()
 
 local DELAY = 3000
-local function delayCb ()
+local function delayCb()
     if timer then
         timer:stop()
     end
 
     timer = vim.loop.new_timer()
-    timer:start(DELAY, 0, function ()
+    timer:start(DELAY, 0, function()
         vim.schedule(preCog.peek)
     end)
 end
