@@ -47,6 +47,9 @@ vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 
 -- set colorscheme
 vim.cmd.colorscheme('kanagawa')
+vim.cmd('highlight TelescopeBorder guibg=none')
+vim.cmd('highlight TelescopeTitle guibg=none')
+
 
 vim.cmd('TSEnable highlight')
 
