@@ -25,8 +25,9 @@ set -x GPG_TTY (tty)
 # Add config scripts to the path
 set -U fish_user_paths $fish_user_paths $HOME/.config/scripts
 
-
-source /Users/gjohnson/.docker/init-fish.sh || true # Added by Docker Desktop
+if test -d $HOME/.docker/init-fish.sh
+    source $HOME/.docker/init-fish.sh || true # Added by Docker Desktop
+end
 
 
 # pnpm

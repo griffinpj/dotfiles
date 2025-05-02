@@ -1,3 +1,3 @@
 function ls
-    exa -abghHliS $argv
+    eza -abghHliS $argv
 end
