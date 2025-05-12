@@ -38,5 +38,7 @@ set -gx PATH "$PNPM_HOME" $PATH
 #zk setup
 export ZK_NOTEBOOK_DIR="$HOME/vaults/Palace"
 
+export HYPRSHOT_DIR="$HOME/Pictures/screenshots"
+
 export XDG_CONFIG_HOME="$HOME/.config"
 zoxide init fish | source

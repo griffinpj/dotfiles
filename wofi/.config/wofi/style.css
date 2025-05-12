@@ -1,0 +1,48 @@
+window {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: "Comic Code Ligatures";
+    margin: 0px;
+    border: 1px solid #88c0d0;
+    background-color: #111111;
+    border-radius: 10px;
+    border-width: 3px;
+    border-color: #2c8dc8;
+    max-width: 800px;
+    font-size: 15px;
+}
+
+#input {
+    margin: 5px;
+    border: none;
+    color: #d8dee9;
+    background-color: #111111;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: #111111;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: #111111;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #d8dee9;
+}
+
+#entry:selected {
+    border-radius: 3px;
+    background-color: #2c8dc8;
+}
