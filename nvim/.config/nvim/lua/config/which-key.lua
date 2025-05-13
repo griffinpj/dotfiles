@@ -2,7 +2,7 @@ local wk = require("which-key")
 
 wk.add({
     { "<leader>f", group = "file" },
-    { "<leader>z", group = "folds" },
+    { "<leader>z", group = "zettl" },
     { "<leader>p", group = "search" },
     { "<leader>m", group = "motions" },
     { "<leader>g", group = "git" },
