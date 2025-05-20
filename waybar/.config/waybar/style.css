@@ -70,8 +70,13 @@ button:hover {
   color: @maroon;
 }
 
-#network,
-#cpu,
+#network {
+    color: @peach;
+}
+
+#cpu {
+    color: @sapphire;
+}
 #memory {
   color: @yellow;
 }

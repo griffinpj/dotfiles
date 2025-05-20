@@ -13,7 +13,7 @@ check_command() {
 check_command yay
 
 aur_pkgs=(
-    "webcord"
+    "discord"
     "tofi"
     "font-manager"
     "plexamp-appimage"
@@ -37,12 +37,13 @@ arch_pkgs=(
     "linux-headers"
     "dkms"
     "zk"
-    "xclip"
     "jq"
     "texlive"
     "zathura"
     "nwg-displays"
     "bluez"
+    "imagemagick"
+    "yazi"
 
     # GUI apps
     "firefox"
@@ -50,6 +51,7 @@ arch_pkgs=(
     "lutris"
     "obsidian"
     "okular"
+    "qutebrowser"
 
     # hyprland stuff
     "hyprpaper"
