@@ -15,7 +15,8 @@ require('nvim-treesitter.configs').setup({
         "go",
         "typescript",
         "regex",
-        "markdown"
+        "markdown",
+        "embedded_template"
     },
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -37,3 +38,5 @@ require('nvim-treesitter.configs').setup({
 
 })
 
+local ft_to_parser = require"nvim-treesitter.parsers".filetype_to_parsernam
+ft_to_parser.ejs = "html"
