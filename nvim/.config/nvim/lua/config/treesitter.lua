@@ -44,5 +44,4 @@ require('nvim-treesitter.configs').setup({
 
 })
 
--- Configure EJS to use embedded_template parser
-vim.treesitter.language.register("embedded_template", "ejs")
+-- EJS uses custom vim syntax highlighting instead of treesitter

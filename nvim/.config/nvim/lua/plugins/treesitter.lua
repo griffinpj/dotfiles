@@ -4,7 +4,6 @@ return {
         event = { "BufReadPost", "BufNewFile" },
         dependencies = {
             'nvim-treesitter/nvim-treesitter-context',
-            'tree-sitter/tree-sitter-embedded-template',
         },
         build = ":TSUpdate",
         config = function()

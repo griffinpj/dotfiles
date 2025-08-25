@@ -2,7 +2,7 @@ local vim = vim
 
 vim.filetype.add({
     extension = {
-        ejs = "html"
+        ejs = "ejs"
     }
 })
 
