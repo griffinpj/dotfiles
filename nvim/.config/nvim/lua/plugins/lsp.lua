@@ -91,6 +91,21 @@ return {
                     function(server_name)
                         require('lspconfig')[server_name].setup({})
                     end,
+                    
+                    -- Custom handler for HTML language server to support EJS
+                    html = function()
+                        require('lspconfig').html.setup({
+                            filetypes = { "html", "ejs" },
+                            init_options = {
+                                configurationSection = { "html", "css", "javascript" },
+                                embeddedLanguages = {
+                                    css = true,
+                                    javascript = true
+                                },
+                                provideFormatter = true
+                            }
+                        })
+                    end,
                 }
             })
         end

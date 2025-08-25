@@ -16,6 +16,8 @@ require('nvim-treesitter.configs').setup({
         "typescript",
         "regex",
         "markdown",
+        "html",
+        "css",
         "embedded_template"
     },
 
@@ -36,7 +38,11 @@ require('nvim-treesitter.configs').setup({
         additional_vim_regex_highlighting = true,
     },
 
+    -- Language injection for embedded templates
+    indent = { enable = true },
+    incremental_selection = { enable = true },
+
 })
 
-local ft_to_parser = require"nvim-treesitter.parsers".filetype_to_parsernam
-ft_to_parser.ejs = "html"
+local ft_to_parser = require"nvim-treesitter.parsers".filetype_to_parsername
+ft_to_parser.ejs = "embedded_template"
