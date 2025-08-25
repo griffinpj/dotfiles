@@ -35,7 +35,7 @@ require('nvim-treesitter.configs').setup({
         -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
         -- Using this option may slow down your editor, and you may see some duplicate highlights.
         -- Instead of true it can also be a list of languages
-        additional_vim_regex_highlighting = true,
+        additional_vim_regex_highlighting = false,
     },
 
     -- Language injection for embedded templates
@@ -44,5 +44,5 @@ require('nvim-treesitter.configs').setup({
 
 })
 
-local ft_to_parser = require"nvim-treesitter.parsers".filetype_to_parsername
-ft_to_parser.ejs = "embedded_template"
+-- Configure EJS to use embedded_template parser
+vim.treesitter.language.register("embedded_template", "ejs")

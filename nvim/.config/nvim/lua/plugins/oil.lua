@@ -1,5 +1,8 @@
 return {
     'stevearc/oil.nvim',
+    cmd = "Oil",
+    keys = { { "-", "<cmd>Oil<cr>", desc = "Open Oil" } },
+    event = "VimEnter",
     opts = {},
     -- Optional dependencies
     -- dependencies = { { "echasnovski/mini.icons", opts = {} } },

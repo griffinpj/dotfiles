@@ -35,7 +35,7 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
-vim.opt.updatetime = 50
+vim.opt.updatetime = 250
 vim.g.sessions_root = vim.fn.stdpath("config") .. "/nvim/sessions"
 
 vim.o.foldcolumn = '1'
@@ -44,6 +44,10 @@ vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+
+-- disable netrw to use oil as default file explorer
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- set colorscheme
 vim.cmd.colorscheme('kanagawa')
