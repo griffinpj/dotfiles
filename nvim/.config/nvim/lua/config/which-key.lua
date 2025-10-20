@@ -7,9 +7,11 @@ wk.add({
     { "<leader>m", group = "motions" },
     { "<leader>g", group = "git" },
     { "<leader>l", group = "lazy" },
-    { "<leader>i", group = "icons" },
     { "<leader>r", group = "replace" },
     { "<leader>u", desc = "View undotree" },
+    { "<leader>s", desc = "icons" },
+    { "<leader>c", desc = "claude & lsp" },
+
     -- { "<leader>fb", function() print("hello") end, desc = "Foobar" },
     -- { "<leader>fn", desc = "New File" },
     -- { "<leader>f1", hidden = true }, -- hide this keymap
