@@ -20,6 +20,16 @@ wk.add({
     -- Leader mappings
     { "<leader>ff", vim.lsp.buf.format, desc = 'Format file' },
     { "<leader>fx", "<cmd>!chmod +x %<CR>", desc = "Set file as executable" },
+    { "<leader>fy", function()
+        local path = vim.fn.expand('%:.')
+        vim.fn.setreg('+', path)
+        vim.notify('Copied to clipboard: ' .. path)
+    end, desc = "Copy relative file path to clipboard" },
+    { "<leader>fY", function()
+        local path = vim.fn.expand('%:p')
+        vim.fn.setreg('+', path)
+        vim.notify('Copied to clipboard: ' .. path)
+    end, desc = "Copy full file path to clipboard" },
     { "<leader>q", "<cmd>q<cr>", desc = "Quit" }, -- no need to specify mode since it's inherited
     { "<leader>fw", "<cmd>w<cr>", desc = "Write" },
     { "<leader>rs", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], desc = 'Replace string' },
