@@ -34,6 +34,30 @@ vim.api.nvim_set_keymap("n", "<leader>zi", "<Cmd>ZkInsertLink<CR>",
 vim.api.nvim_set_keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>",
     { noremap = true, silent = false, desc = 'Search for notes matching selection', })
 
+-- Always-vault telescope searches (work from anywhere)
+-- These use the custom entry makers from telescope config to show YAML titles
+local vault_path = '/Users/griffin.johnson/vaults/Palace'
+
+vim.keymap.set('n', '<leader>zvf', function()
+    -- Load the telescope config to get the custom entry makers
+    local telescope_config = require('config.telescope')
+    require('telescope.builtin').find_files({
+        cwd = vault_path,
+        prompt_title = 'Find Files [vault]',
+        entry_maker = telescope_config.make_entry_with_title({ cwd = vault_path })
+    })
+end, { desc = 'Find files in vault' })
+
+vim.keymap.set('n', '<leader>zvs', function()
+    -- Load the telescope config to get the custom entry makers
+    local telescope_config = require('config.telescope')
+    require('telescope.builtin').live_grep({
+        cwd = vault_path,
+        prompt_title = 'Live Grep [vault]',
+        entry_maker = telescope_config.make_grep_entry_with_title({ cwd = vault_path })
+    })
+end, { desc = 'Search in vault' })
+
 
 -- Create new note for current visual selection.
 
