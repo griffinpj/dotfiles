@@ -21,42 +21,46 @@ vim.api.nvim_set_keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' }
 vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags { sort = { 'name-' } }<CR>",
     { noremap = true, silent = false, desc = 'Open notes for tag', })
 
--- Search for the notes matching a given query.
-vim.api.nvim_set_keymap("n", "<leader>zf",
-    "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>",
-    { noremap = true, silent = false, desc = 'Search notes', })
+-- Removed redundant <leader>zf mapping - use <leader>zof for vault file search instead
 
 -- Telescope search and insert link for note
 vim.api.nvim_set_keymap("n", "<leader>zi", "<Cmd>ZkInsertLink<CR>",
     { noremap = true, silent = false, desc = 'Search and insert link to note', })
 
--- Search for the notes matching the current visual selection.
-vim.api.nvim_set_keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>",
-    { noremap = true, silent = false, desc = 'Search for notes matching selection', })
+-- Removed redundant visual <leader>zf mapping
 
 -- Always-vault telescope searches (work from anywhere)
 -- These use the custom entry makers from telescope config to show YAML titles
-local vault_path = '/Users/griffin.johnson/vaults/Palace'
+local paths = require('config.paths')
+local vault_path = paths.home_path('vaults/Palace')
 
-vim.keymap.set('n', '<leader>zvf', function()
+vim.keymap.set('n', '<leader>zpf', function()
     -- Load the telescope config to get the custom entry makers
     local telescope_config = require('config.telescope')
-    require('telescope.builtin').find_files({
-        cwd = vault_path,
-        prompt_title = 'Find Files [vault]',
-        entry_maker = telescope_config.make_entry_with_title({ cwd = vault_path })
-    })
-end, { desc = 'Find files in vault' })
+    local opts = {}
+    opts.cwd = vault_path
+    opts.prompt_title = 'Find Files [vault]'
+    opts.entry_maker = telescope_config.make_entry_with_title(opts)
+    
+    require('telescope.builtin').find_files(opts)
+end, { desc = 'Find files in vault (from anywhere)' })
 
-vim.keymap.set('n', '<leader>zvs', function()
+vim.keymap.set('n', '<leader>zps', function()
     -- Load the telescope config to get the custom entry makers
     local telescope_config = require('config.telescope')
-    require('telescope.builtin').live_grep({
-        cwd = vault_path,
-        prompt_title = 'Live Grep [vault]',
-        entry_maker = telescope_config.make_grep_entry_with_title({ cwd = vault_path })
-    })
-end, { desc = 'Search in vault' })
+    local opts = {}
+    opts.cwd = vault_path
+    opts.prompt_title = 'Live Grep [vault]'
+    opts.entry_maker = telescope_config.make_grep_entry_with_title(opts)
+    
+    require('telescope.builtin').live_grep(opts)
+end, { desc = 'Search in vault (from anywhere)' })
+
+-- Quick vault navigation
+vim.keymap.set('n', '<leader>zv', function()
+    vim.cmd('cd ' .. vault_path)
+    print('Switched to vault: ' .. vault_path)
+end, { desc = 'Navigate to vault directory' })
 
 
 -- Create new note for current visual selection.
