@@ -19,6 +19,8 @@ aur_pkgs=(
     "plexamp-appimage"
     "hyprshot" # https://github.com/Gustash/Hyprshot
     "clipman" # https://wiki.hyprland.org/Useful-Utilities/Clipboard-Managers/
+    "hyprsunset"
+    "zoom"
 )
 
 arch_pkgs=(
@@ -44,6 +46,7 @@ arch_pkgs=(
     "bluez"
     "imagemagick"
     "yazi"
+    "cups"
 
     # GUI apps
     "firefox"
