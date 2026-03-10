@@ -3,7 +3,8 @@ require('zk').setup({
     telescope = require("telescope.themes").get_ivy(),
 })
 
-local opts = { noremap = true, silent = false }
+local paths = require('config.paths')
+local vault_path = paths.home_path('vaults/Palace')
 
 -- ZK Plugin Command and Keymapping Support
 
@@ -11,8 +12,9 @@ local opts = { noremap = true, silent = false }
 vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>",
     { noremap = true, silent = false, desc = 'Create new note w/ title', })
 
-vim.api.nvim_set_keymap("n", "<leader>zd", "<Cmd>ZkNew { date = 'today', dir = 'daily' }<CR>",
-    { noremap = true, silent = false, desc = 'Open daily note', })
+vim.keymap.set("n", "<leader>zd", function()
+    require('zk').new({ date = 'today', dir = 'daily', notebook_path = vault_path })
+end, { desc = 'Open daily note' })
 
 -- Open notes.
 vim.api.nvim_set_keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>",
@@ -26,13 +28,6 @@ vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags { sort = { 'name-' } }<C
 -- Telescope search and insert link for note
 vim.api.nvim_set_keymap("n", "<leader>zi", "<Cmd>ZkInsertLink<CR>",
     { noremap = true, silent = false, desc = 'Search and insert link to note', })
-
--- Removed redundant visual <leader>zf mapping
-
--- Always-vault telescope searches (work from anywhere)
--- These use the custom entry makers from telescope config to show YAML titles
-local paths = require('config.paths')
-local vault_path = paths.home_path('vaults/Palace')
 
 vim.keymap.set('n', '<leader>zpf', function()
     -- Load the telescope config to get the custom entry makers
