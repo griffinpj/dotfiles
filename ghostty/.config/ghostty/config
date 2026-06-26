@@ -12,3 +12,6 @@ background-opacity = 0.85
 # the best font out there. you knowwww
 font-family = Comic Code Ligatures
 keybind = shift+enter=text:\x1b\r
+
+# 1000 MB
+scrollback-limit = 1000000000

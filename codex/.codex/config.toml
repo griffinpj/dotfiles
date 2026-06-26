@@ -1,0 +1,13 @@
+# web_search = "cached"  # default; serves results from the web search cache
+# # web_search = "live"  # fetch the most recent data from the web (same as --search)
+# # web_search = "disabled"
+web_search = "live"
+
+# personality = "friendly" # or "pragmatic" or "none"
+personality = "pragmatic"
+
+# Control which environment variables Codex forwards to spawned commands.
+[shell_environment_policy]
+include_only = ["PATH", "HOME", "ZK_NOTEBOOK_DIR"]
+
+model_reasoning_effort = "xhigh"  # "low", "medium", "high", "xhigh"
