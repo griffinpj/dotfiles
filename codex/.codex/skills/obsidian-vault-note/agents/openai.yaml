@@ -1,0 +1,4 @@
+interface:
+  display_name: "Obsidian Vault Note"
+  short_description: "Create linked notes in your zk vault"
+  default_prompt: "Use $obsidian-vault-note to create a linked Obsidian note in my zk notebook."
