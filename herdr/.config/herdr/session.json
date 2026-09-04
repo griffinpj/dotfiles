@@ -42,8 +42,8 @@
       "custom_name": "[2] dotfiles",
       "identity_cwd": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr",
       "public_pane_numbers": {
-        "11": 1,
-        "29": 7
+        "29": 7,
+        "11": 1
       },
       "next_public_pane_number": 10,
       "public_tab_numbers": [
@@ -52,11 +52,11 @@
       "next_public_tab_number": 2,
       "tabs": [
         {
-          "custom_name": "[1] lazygit",
+          "custom_name": "[1] zsh",
           "layout": {
             "Split": {
               "direction": "Horizontal",
-              "ratio": 0.6,
+              "ratio": 0.5,
               "first": {
                 "Pane": 11
               },
@@ -66,11 +66,11 @@
             }
           },
           "panes": {
-            "11": {
-              "cwd": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr"
-            },
             "29": {
               "cwd": "/Users/griffin.johnson/dotfiles"
+            },
+            "11": {
+              "cwd": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr"
             }
           },
           "zoomed": false,

@@ -1288,3 +1288,23 @@
 2026-09-04T17:06:02.537471Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t1"
 2026-09-04T17:06:02.538402Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:rename" method="tab.rename"
 2026-09-04T17:06:07.539581Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/griffin.johnson/.config/herdr/session.json workspaces=4
+2026-09-04T17:06:45.570762Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t1"
+2026-09-04T17:06:48.429432Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t1"
+2026-09-04T17:06:50.223670Z  INFO herdr::server::headless: client resize client_id=4 cols=160 rows=79 cell_width_px=0 cell_height_px=0
+2026-09-04T17:06:50.324412Z  INFO herdr::server::headless: client resize client_id=4 cols=166 rows=79 cell_width_px=0 cell_height_px=0
+2026-09-04T17:06:50.633086Z  INFO herdr::server::headless: client resize client_id=4 cols=172 rows=79 cell_width_px=0 cell_height_px=0
+2026-09-04T17:06:50.736039Z  INFO herdr::server::headless: client resize client_id=4 cols=178 rows=79 cell_width_px=0 cell_height_px=0
+2026-09-04T17:06:50.941946Z  INFO herdr::server::headless: client resize client_id=4 cols=185 rows=79 cell_width_px=0 cell_height_px=0
+2026-09-04T17:06:51.148967Z  INFO herdr::server::headless: client resize client_id=4 cols=191 rows=79 cell_width_px=0 cell_height_px=0
+2026-09-04T17:06:51.251002Z  INFO herdr::server::headless: client resize client_id=4 cols=197 rows=79 cell_width_px=0 cell_height_px=0
+2026-09-04T17:06:53.433879Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/griffin.johnson/.config/herdr/session.json workspaces=4
+2026-09-04T17:06:56.556888Z  INFO herdr::server::headless: client resize client_id=4 cols=252 rows=79 cell_width_px=0 cell_height_px=0
+2026-09-04T17:07:06.549500Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t1"
+2026-09-04T17:07:07.111379Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:rename" method="tab.rename" changes_ui=true
+2026-09-04T17:07:07.111453Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t1"
+2026-09-04T17:07:07.112430Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:rename" method="tab.rename"
+2026-09-04T17:07:07.628505Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t1"
+2026-09-04T17:07:08.300725Z  INFO herdr::logging: api request received event="api.request.start" subsystem="api" outcome="started" request_id="cli:tab:rename" method="tab.rename" changes_ui=true
+2026-09-04T17:07:08.300810Z  INFO herdr::logging: tab renamed event="tab.rename" subsystem="tab" outcome="ok" workspace_id="w4" tab_id="w4:t1"
+2026-09-04T17:07:08.301975Z  INFO herdr::logging: api request completed event="api.request.complete" subsystem="api" outcome="ok" request_id="cli:tab:rename" method="tab.rename"
+2026-09-04T17:07:13.311687Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/Users/griffin.johnson/.config/herdr/session.json workspaces=4
