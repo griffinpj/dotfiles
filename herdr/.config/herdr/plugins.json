@@ -1,0 +1,458 @@
+[
+  {
+    "plugin_id": "aigora.lantern",
+    "name": "Lantern, by Elves",
+    "version": "0.9.11",
+    "min_herdr_version": "0.7.5",
+    "description": "From the team that brought you Elves. Herdr manages the herd. The herd is in the field. Lantern illuminates the field.",
+    "manifest_path": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr/plugins/github/aigora.lantern-df7f63ee26c6/herdr-plugin.toml",
+    "plugin_root": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr/plugins/github/aigora.lantern-df7f63ee26c6",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ],
+    "actions": [
+      {
+        "id": "open",
+        "title": "Open lantern",
+        "description": "Open the lantern chat in its own workspace",
+        "command": [
+          "sh",
+          "open.sh"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "helper",
+        "title": "Lantern",
+        "placement": "tab",
+        "command": [
+          "sh",
+          "launch.sh"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "aigorahub",
+      "repo": "herdr-lantern",
+      "resolved_commit": "f94266bb103a010f7ddf72bc19ba40450bc0233c",
+      "managed_path": "/Users/griffin.johnson/.config/herdr/plugins/github/aigora.lantern-df7f63ee26c6",
+      "installed_unix_ms": 1788476038762
+    }
+  },
+  {
+    "plugin_id": "herdr-automatic-rename",
+    "name": "Herdr Automatic Rename",
+    "version": "0.8.0",
+    "min_herdr_version": "0.7.1",
+    "description": "Auto-name tabs after where the work is and what is running there -- the directory, the branch, the machine reached over ssh, then the program or the task an agent reports -- and/or prefix workspaces, tabs, and agents with their 1-9 jump-key number. Each feature toggles via config.sh.",
+    "manifest_path": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr/plugins/github/herdr-automatic-rename-db02a35e1e35/herdr-plugin.toml",
+    "plugin_root": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr/plugins/github/herdr-automatic-rename-db02a35e1e35",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "startup": [
+      {
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "startup"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "clear",
+        "title": "Herdr Automatic Rename: strip all number prefixes",
+        "contexts": [
+          "global"
+        ],
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "--clear"
+        ]
+      },
+      {
+        "id": "reset",
+        "title": "Reset tab to automatic naming",
+        "contexts": [
+          "global"
+        ],
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "reset"
+        ]
+      }
+    ],
+    "events": [
+      {
+        "on": "pane.agent_detected",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "pane.agent_detected"
+        ]
+      },
+      {
+        "on": "pane.agent_status_changed",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "pane.agent_status_changed"
+        ]
+      },
+      {
+        "on": "pane.closed",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "pane.closed"
+        ]
+      },
+      {
+        "on": "pane.created",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "pane.created"
+        ]
+      },
+      {
+        "on": "pane.exited",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "pane.exited"
+        ]
+      },
+      {
+        "on": "pane.focused",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "pane.focused"
+        ]
+      },
+      {
+        "on": "pane.moved",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "pane.moved"
+        ]
+      },
+      {
+        "on": "tab.closed",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "tab.closed"
+        ]
+      },
+      {
+        "on": "tab.created",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "tab.created"
+        ]
+      },
+      {
+        "on": "tab.focused",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "tab.focused"
+        ]
+      },
+      {
+        "on": "tab.moved",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "tab.moved"
+        ]
+      },
+      {
+        "on": "tab.renamed",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "tab.renamed"
+        ]
+      },
+      {
+        "on": "workspace.closed",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "workspace.closed"
+        ]
+      },
+      {
+        "on": "workspace.created",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "workspace.created"
+        ]
+      },
+      {
+        "on": "workspace.moved",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "workspace.moved"
+        ]
+      },
+      {
+        "on": "workspace.renamed",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "workspace.renamed"
+        ]
+      },
+      {
+        "on": "workspace.reordered",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "workspace.reordered"
+        ]
+      },
+      {
+        "on": "worktree.created",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "worktree.created"
+        ]
+      },
+      {
+        "on": "worktree.opened",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "worktree.opened"
+        ]
+      },
+      {
+        "on": "worktree.removed",
+        "command": [
+          "bash",
+          "automatic-rename.sh",
+          "worktree.removed"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "qu8n",
+      "repo": "herdr-automatic-rename",
+      "resolved_commit": "bd0dfc4bf8053df13ebb527f213a0e74d1420e2c",
+      "managed_path": "/Users/griffin.johnson/.config/herdr/plugins/github/herdr-automatic-rename-db02a35e1e35",
+      "installed_unix_ms": 1788476015029
+    }
+  },
+  {
+    "plugin_id": "herdr.auto-title",
+    "name": "Auto Title",
+    "version": "0.3.3",
+    "min_herdr_version": "0.8.2",
+    "description": "Automatically generates contextual tab titles",
+    "manifest_path": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr/plugins/github/herdr.auto-title-4b7d61f48ce8/herdr-plugin.toml",
+    "plugin_root": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr/plugins/github/herdr.auto-title-4b7d61f48ce8",
+    "enabled": true,
+    "platforms": [
+      "linux",
+      "macos"
+    ],
+    "build": [
+      {
+        "command": [
+          "go",
+          "build",
+          "-o",
+          "herdr-auto-title",
+          "./cmd/herdr-auto-title"
+        ]
+      }
+    ],
+    "startup": [
+      {
+        "command": [
+          "./herdr-auto-title"
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "kryptamine",
+      "repo": "herdr-auto-title",
+      "resolved_commit": "2906e44089775c73dadde9671d24766926c097ad",
+      "managed_path": "/Users/griffin.johnson/.config/herdr/plugins/github/herdr.auto-title-4b7d61f48ce8",
+      "installed_unix_ms": 1788476094740
+    }
+  },
+  {
+    "plugin_id": "nicosuave.memex",
+    "name": "memex",
+    "version": "0.13.0",
+    "min_herdr_version": "0.7.0",
+    "description": "Session desk for your agent history: search past Claude Code / Codex / Cursor / Pi / Oh My Pi sessions and resume one into a herdr tab.",
+    "manifest_path": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr/plugins/github/nicosuave.memex-0a395832d8a8/herdr-plugin.toml",
+    "plugin_root": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr/plugins/github/nicosuave.memex-0a395832d8a8",
+    "enabled": true,
+    "platforms": [
+      "macos",
+      "linux"
+    ],
+    "build": [
+      {
+        "command": [
+          "bash",
+          "herdr/install.sh"
+        ]
+      }
+    ],
+    "startup": [
+      {
+        "command": [
+          "bash",
+          "herdr/plugin.sh",
+          "startup"
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "desk",
+        "title": "memex: session desk",
+        "command": [
+          "bash",
+          "herdr/plugin.sh",
+          "desk"
+        ]
+      },
+      {
+        "id": "index",
+        "title": "memex: refresh index",
+        "command": [
+          "bash",
+          "herdr/plugin.sh",
+          "index"
+        ]
+      },
+      {
+        "id": "palette",
+        "title": "memex: session palette",
+        "contexts": [
+          "pane",
+          "workspace"
+        ],
+        "command": [
+          "bash",
+          "herdr/plugin.sh",
+          "palette"
+        ]
+      },
+      {
+        "id": "recent-here",
+        "title": "memex: recent sessions here",
+        "contexts": [
+          "pane",
+          "workspace"
+        ],
+        "command": [
+          "bash",
+          "herdr/plugin.sh",
+          "recent-here"
+        ]
+      },
+      {
+        "id": "resume-last",
+        "title": "memex: resume last session",
+        "contexts": [
+          "pane",
+          "workspace"
+        ],
+        "command": [
+          "bash",
+          "herdr/plugin.sh",
+          "resume-last"
+        ]
+      },
+      {
+        "id": "toggle",
+        "title": "memex: toggle sidebar",
+        "contexts": [
+          "pane",
+          "workspace"
+        ],
+        "command": [
+          "bash",
+          "herdr/plugin.sh",
+          "toggle"
+        ]
+      },
+      {
+        "id": "web",
+        "title": "memex: open web UI",
+        "command": [
+          "bash",
+          "herdr/plugin.sh",
+          "web"
+        ]
+      }
+    ],
+    "panes": [
+      {
+        "id": "desk",
+        "title": "memex",
+        "placement": "zoomed",
+        "command": [
+          "sh",
+          "-c",
+          "exec \"$HERDR_PLUGIN_ROOT/herdr/memex-pane.sh\""
+        ]
+      },
+      {
+        "id": "palette",
+        "title": "memex",
+        "placement": "overlay",
+        "command": [
+          "sh",
+          "-c",
+          "exec \"$HERDR_PLUGIN_ROOT/herdr/memex-pane.sh\""
+        ]
+      },
+      {
+        "id": "sidebar",
+        "title": "memex",
+        "placement": "split",
+        "command": [
+          "sh",
+          "-c",
+          "exec \"$HERDR_PLUGIN_ROOT/herdr/memex-pane.sh\""
+        ]
+      }
+    ],
+    "source": {
+      "kind": "github",
+      "owner": "nicosuave",
+      "repo": "memex",
+      "resolved_commit": "969ab58c88661557d9e5a3445d7dfc583e89e1cb",
+      "managed_path": "/Users/griffin.johnson/.config/herdr/plugins/github/nicosuave.memex-0a395832d8a8",
+      "installed_unix_ms": 1788476024922
+    }
+  }
+]

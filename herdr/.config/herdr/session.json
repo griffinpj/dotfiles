@@ -1,0 +1,155 @@
+{
+  "version": 3,
+  "workspaces": [
+    {
+      "id": "w3",
+      "custom_name": "[1] UPF",
+      "identity_cwd": "/Users/griffin.johnson/code",
+      "public_pane_numbers": {
+        "5": 1
+      },
+      "next_public_pane_number": 5,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 3,
+      "tabs": [
+        {
+          "custom_name": "[1] code › unified-portal-frontend PR",
+          "layout": {
+            "Pane": 5
+          },
+          "panes": {
+            "5": {
+              "cwd": "/Users/griffin.johnson/code",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "6c608dfe-1c5e-4eb9-8b0e-e2ef4bb25464"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 5,
+          "root_pane": 5
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w4",
+      "custom_name": "[2] dotfiles",
+      "identity_cwd": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr",
+      "public_pane_numbers": {
+        "11": 1,
+        "29": 7
+      },
+      "next_public_pane_number": 10,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": "[1] lazygit",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.6,
+              "first": {
+                "Pane": 11
+              },
+              "second": {
+                "Pane": 29
+              }
+            }
+          },
+          "panes": {
+            "11": {
+              "cwd": "/Users/griffin.johnson/dotfiles/herdr/.config/herdr"
+            },
+            "29": {
+              "cwd": "/Users/griffin.johnson/dotfiles"
+            }
+          },
+          "zoomed": false,
+          "focused": 29,
+          "root_pane": 11
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w5",
+      "custom_name": "[3] mortgage-lending",
+      "identity_cwd": "/Users/griffin.johnson/code/mortgage-lending",
+      "public_pane_numbers": {
+        "14": 2
+      },
+      "next_public_pane_number": 6,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": "[1] Mortgage-lending subdomain",
+          "layout": {
+            "Pane": 14
+          },
+          "panes": {
+            "14": {
+              "cwd": "/Users/griffin.johnson/code/mortgage-lending",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "9d44c2b3-1ab0-48d4-b8a5-9ed98e621992"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 14,
+          "root_pane": 14
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w7",
+      "custom_name": "[4] mortgage-lending",
+      "identity_cwd": "/Users/griffin.johnson/code/mortgage-lending",
+      "public_pane_numbers": {
+        "26": 1
+      },
+      "next_public_pane_number": 3,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": "[1] codex",
+          "layout": {
+            "Pane": 26
+          },
+          "panes": {
+            "26": {
+              "cwd": "/Users/griffin.johnson/code/mortgage-lending"
+            }
+          },
+          "zoomed": false,
+          "focused": 26,
+          "root_pane": 26
+        }
+      ],
+      "active_tab": 0
+    }
+  ],
+  "active": 1,
+  "selected": 1,
+  "sidebar_width": 33,
+  "sidebar_section_split": 0.5,
+  "collapsed_space_keys": []
+}

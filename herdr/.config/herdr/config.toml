@@ -1,0 +1,70 @@
+onboarding = false
+[keys]
+split_vertical   = ["prefix+v", "prefix+left", "prefix+right"]
+split_horizontal = ["prefix+up", "prefix+down"]
+navigate_workspace_up   = ["up", "k"]
+navigate_workspace_down = ["down", "j"]
+resize_mode = "prefix+r"
+resize_pane_left = ""
+resize_pane_down = ""
+resize_pane_up = ""
+resize_pane_right = ""
+swap_pane_left = "prefix+shift+h"
+swap_pane_down = "prefix+shift+j"
+swap_pane_up = "prefix+shift+k"
+swap_pane_right = "prefix+shift+l"
+switch_workspace = "prefix+shift+1..9"
+focus_agent = "prefix+alt+1..9"
+
+[[keys.command]]
+key = "prefix+m"
+type = "plugin_action"
+command = "nicosuave.memex.palette"
+description = "memex session palette"
+
+[[keys.command]]
+key = "prefix+shift+m"
+type = "plugin_action"
+command = "nicosuave.memex.recent-here"
+description = "memex recent sessions here"
+
+[[keys.command]]
+key = "prefix+alt+m"
+type = "plugin_action"
+command = "nicosuave.memex.toggle"
+description = "memex sidebar"
+
+[[keys.command]]
+key = "prefix+shift+i"
+type = "plugin_action"
+command = "aigora.lantern.open"
+description = "open lantern"
+
+[ui]
+prompt_new_tab_name = false
+sidebar_width = 32
+sidebar_max_width = 44
+show_agent_labels_on_pane_borders = true
+status_indicators = "symbols"
+agent_panel_sort = "priority"
+tab_bar_right = [
+  { type = "zoom" },
+  { type = "hostname" },
+  { type = "datetime", format = "%H:%M" },
+]
+tab_bar_right_separator = " "
+
+[ui.sidebar.agents]
+row_gap = 0
+rows = [
+  ["state_icon", "agent", "state_text"],
+  ["terminal_title_stripped"],
+  ["workspace", "tab"],
+]
+
+[ui.sidebar.spaces]
+row_gap = 0
+rows = [
+  ["state_icon", "workspace", "state_text"],
+  ["branch", "git_status"],
+]
