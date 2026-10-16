@@ -20,6 +20,9 @@ exec-on-workspace-change = [
     '/opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change AEROSPACE_FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE AEROSPACE_PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE',
 ]
 
+# Refresh sketchybar workspace icons when windows move between workspaces or close
+on-focus-changed = ['exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar --trigger aerospace_workspace_change']
+
 # Start AeroSpace at login
 start-at-login = true
 

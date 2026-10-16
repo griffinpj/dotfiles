@@ -39,8 +39,8 @@ brew install --cask font-hack-nerd-font
 
 curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.25/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
 
-# SbarLua
-(git clone https://github.com/FelixKratz/SbarLua.git /tmp/SbarLua && cd /tmp/SbarLua/ && make install && rm -rf /tmp/SbarLua/)
+# SbarLua (sketchybarrc is Lua; installs to ~/.local/share/sketchybar_lua)
+rm -rf /tmp/SbarLua && git clone https://github.com/FelixKratz/SbarLua.git /tmp/SbarLua && make -C /tmp/SbarLua install && rm -rf /tmp/SbarLua
 
 # Start Services
 echo "Starting Services (grant permissions)..."
